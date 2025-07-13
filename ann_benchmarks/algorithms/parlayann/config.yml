@@ -2,7 +2,7 @@ float:
   euclidean:
   - base_args: ['@metric']
     constructor: ParlayANN
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-parlayann
     module: ann_benchmarks.algorithms.parlayann
     name: parlayann
@@ -22,7 +22,7 @@ float:
   angular:
   - base_args: ['@metric']
     constructor: ParlayANN
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-parlayann
     module: ann_benchmarks.algorithms.parlayann
     name: parlayann

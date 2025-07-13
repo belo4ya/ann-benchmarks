@@ -338,16 +338,16 @@ def run_docker(
             os.path.abspath("results"): {"bind": "/home/app/results", "mode": "rw"},
         },
         network_mode="host",
-        cpuset_cpus=cpu_limit,
-        mem_limit=mem_limit,
+        # cpuset_cpus=cpu_limit,
+        # mem_limit=mem_limit,
         detach=True,
     )
     logger = logging.getLogger(f"annb.{container.short_id}")
 
-    logger.info(
-        "Created container %s: CPU limit %s, mem limit %s, timeout %d, command %s"
-        % (container.short_id, cpu_limit, mem_limit, timeout, cmd)
-    )
+    # logger.info(
+    #     "Created container %s: CPU limit %s, mem limit %s, timeout %d, command %s"
+    #     % (container.short_id, cpu_limit, mem_limit, timeout, cmd)
+    # )
 
     def stream_logs():
         for line in container.logs(stream=True):

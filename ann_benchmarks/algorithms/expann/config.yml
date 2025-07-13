@@ -2,7 +2,7 @@ float:
   any:
   - base_args: ['@metric']
     constructor: ExpAnnWrapper
-    disabled: false
+    disabled: true
     docker_tag: ann-benchmarks-expann
     module: ann_benchmarks.algorithms.expann
     name: expann
