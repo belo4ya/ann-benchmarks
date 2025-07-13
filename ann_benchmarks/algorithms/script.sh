@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-exclude=(pgvector pgvecto_rs pgvectorscale qdrant weaviate opensearchknn \
-         elasticsearch elastiknn milvus faiss faiss_hnsw vespa)
+exclude=(pgvector pgvecto_rs pgvectorscale qdrant weaviate opensearchknn milvus vespa)
 
 for dir in */; do
   alg=${dir%/}

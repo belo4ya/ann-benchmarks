@@ -49,10 +49,7 @@ if __name__ == "__main__":
     else:
         tags = [fn.split(".")[-1] for fn in os.listdir("ann_benchmarks/algorithms")]
 
-    tags = [
-        "pgvector", "pgvecto_rs", "pgvectorscale", "qdrant", "weaviate", "opensearchknn",
-        "elasticsearch", "elastiknn", "milvus", "faiss", "faiss_hnsw", "vespa",
-    ]
+    tags = ["pgvector", "pgvecto_rs", "pgvectorscale", "qdrant", "weaviate", "opensearchknn", "milvus", "vespa"]
 
     print("Building algorithm images... with (%d) processes" % args.proc)
 

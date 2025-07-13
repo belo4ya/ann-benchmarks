@@ -340,6 +340,8 @@ def main():
     definitions = filter_disabled_algorithms(definitions) if not args.run_disabled else definitions
     definitions = limit_algorithms(definitions, args.max_n_algorithms)
 
+    definitions.sort(key=lambda d: "z" if "pgvectorscale" in d.algorithm.lower() else d.algorithm)
+
     if len(definitions) == 0:
         raise Exception("Nothing to run")
     else:
